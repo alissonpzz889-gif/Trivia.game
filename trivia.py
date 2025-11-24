@@ -15,7 +15,7 @@ def translate(text):
     text = html.unescape(text)
     url = "https://clients5.google.com/translate_a/t?client=dict-chrome-ex&sl=auto&tl=pt-BR&q=" + text
 
-try:
+    try:
         res = requests.get(url)
         if res.status_code == 200:
             return res.json()[0][0]  # texto traduzido
