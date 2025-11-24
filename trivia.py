@@ -55,5 +55,11 @@ def run_quiz():
     print("\nBuscando questões...\n")
 
     questions = fetch_questions(amount=7, difficulty=difficulty)
+    
+    if not questions:
+        print("Erro ao buscar perguntas.")
+        return
+
+    score = 0
 
    
