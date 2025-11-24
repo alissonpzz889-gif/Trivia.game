@@ -61,7 +61,7 @@ def run_quiz():
         return
 
     score = 0
-    
+
     for i, q in enumerate(questions, start=1):
 
         pergunta = translate(q["question"])
@@ -74,6 +74,12 @@ def run_quiz():
 
         for idx, alt in enumerate(alternativas, start=1):
             print(f"{idx}) {alt}")
+        while True:
+            try:
+                user_ans = int(input("Resposta (1-4): "))
+                if 1 <= user_ans <= len(alternativas):
+                    break
+
 
 
 
