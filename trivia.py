@@ -37,17 +37,17 @@ def choose_difficulty():
     print("2 - Médio")
     print("3 - Difícil")
 
-while True:
+    while True:
         op = input("Escolha (1/2/3): ")
 
         if op == "1":
             return "easy"
-        if op == "2":
+        elif op == "2":
             return "medium"
-        if op == "3":
+        elif op == "3":
             return "hard"
-
-        print("Opção inválida, tente novamente.")
+        else:
+            print("Opção inválida, tente novamente.")
 
 def run_quiz():
     intro()
