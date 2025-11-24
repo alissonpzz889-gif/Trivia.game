@@ -55,11 +55,26 @@ def run_quiz():
     print("\nBuscando questões...\n")
 
     questions = fetch_questions(amount=7, difficulty=difficulty)
-    
+
     if not questions:
         print("Erro ao buscar perguntas.")
         return
 
     score = 0
+    
+    for i, q in enumerate(questions, start=1):
+
+        pergunta = translate(q["question"])
+        correta = translate(q["correct_answer"])
+        alternativas = [translate(a) for a in q["incorrect_answers"]]
+        alternativas.append(correta)
+        random.shuffle(alternativas)
+
+        print(f"\nPergunta {i}: {pergunta}")
+
+        for idx, alt in enumerate(alternativas, start=1):
+            print(f"{idx}) {alt}")
+
+
 
    
