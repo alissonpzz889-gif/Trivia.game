@@ -79,6 +79,9 @@ def run_quiz():
                 user_ans = int(input("Resposta (1-4): "))
                 if 1 <= user_ans <= len(alternativas):
                     break
+            except:
+                pass
+            print("Opção inválida, tente novamente.")
 
 
 
