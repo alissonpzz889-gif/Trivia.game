@@ -83,8 +83,8 @@ def run_quiz():
                 pass
             print("Opção inválida, tente novamente.")
         if alternativas[user_ans - 1] == correta:
-            print("✔ CORRETA!")
-            score += 1if
+        else:
+            print(f"✘ ERRADA — Resposta certa: {correta}")
 
 
 
