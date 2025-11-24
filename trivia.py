@@ -89,7 +89,8 @@ def run_quiz():
     print("\n===== FIM DO JOGO =====")
     print(f"Você acertou {score} de {len(questions)} perguntas.\n")
 
-
+if __name__ == "__main__":
+    run_quiz()
 
 
    
