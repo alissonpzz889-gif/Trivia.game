@@ -49,4 +49,11 @@ while True:
 
         print("Opção inválida, tente novamente.")
 
+def run_quiz():
+    intro()
+    difficulty = choose_difficulty()
+    print("\nBuscando questões...\n")
+
+    questions = fetch_questions(amount=7, difficulty=difficulty)
+
    
