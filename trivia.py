@@ -85,6 +85,9 @@ def run_quiz():
         if alternativas[user_ans - 1] == correta:
         else:
             print(f"✘ ERRADA — Resposta certa: {correta}")
+            
+    print("\n===== FIM DO JOGO =====")
+    print(f"Você acertou {score} de {len(questions)} perguntas.\n")
 
 
 
