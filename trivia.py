@@ -23,4 +23,7 @@ try:
         pass
 
     return text
+def fetch_questions(amount=7, difficulty="easy"):
+    url = f"https://opentdb.com/api.php?amount={amount}&difficulty={difficulty}&type=multiple"
+    res = requests.get(url)
    
